@@ -1,0 +1,12 @@
+{
+  "name": "@andyyyds/courses",
+  "version": "0.1.0",
+  "private": true,
+  "description": "软件产品库履约桩：开通 Course enrollment，供订单支付回调调用",
+  "exports": {
+    "./*": "./*"
+  },
+  "dependencies": {
+    "@andyyyds/shared": "*"
+  }
+}
