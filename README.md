@@ -43,3 +43,7 @@ npm run dev
 - `packages/mathcode`（`@andyyyds/mathcode`）识图转 LaTeX
 - `packages/shared`（`@andyyyds/shared`）登录、支付、权限等公共能力
 - `src/app` 路由与 API 薄入口
+
+跨站点复用的类型、工具、i18n 与校验来自公共仓库
+[`@yydsxwh/shared`](https://github.com/yydsxwh/shared)，以 git tag 固定版本；
+`packages/shared` 下同名模块只留一行 `export *` 兼容旧 import，不要在本仓库改实现。

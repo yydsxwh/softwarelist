@@ -1,23 +1,18 @@
 /**
  * 软件产品专栏：顶栏「软件产品」→ /products。
  * 后续可在此扩展更多颗秒系产品；外链/状态集中管理，便于上线时改一处。
+ *
+ * 卡片字段由 @yydsxwh/shared 统一定义；本文件只维护本站露出的目录内容
+ * （主站露出的是另一份列表，含客户端下载等入口）。
  */
 
-export type SoftwareProductStatus = "coming_soon" | "beta" | "live";
+import type { SoftwareProduct } from "@yydsxwh/shared/types/software-product";
 
-export type SoftwareProduct = {
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  status: SoftwareProductStatus;
-  /** 正式产品页或外链；空则只展示介绍 */
-  href?: string;
-  /** 卡片角标文案 */
-  badge?: string;
-  /** true=仅站长可用（前台仍展示卡片，进入后按登录身份分流） */
-  adminOnly?: boolean;
-};
+export type {
+  SoftwareProduct,
+  SoftwareProductAction,
+  SoftwareProductStatus,
+} from "@yydsxwh/shared/types/software-product";
 
 export const SOFTWARE_PRODUCTS: SoftwareProduct[] = [
   {
