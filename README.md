@@ -2,6 +2,8 @@
 
 从 [Andyyyds](https://github.com/yydsxwh/Andyyyds) 搬运的**软件产品**专栏：列表页、网页文档、MathCode、游戏中心占位，以及登录 / 支付等支撑功能。
 
+这个仓库可以单独跑，但线上专栏仍由主站提供。产品入口不要在运行时请求主站的 `/api/products`；稳定地址在 `@yydsxwh/shared/products/registry`（`0.6.0`，生产依赖仍钉 `v0.5.1` 直到打 tag）。
+
 ## 功能
 
 - **软件产品列表**（`/`、`/products`）：网页文档、MathCode、颗秒会议、颗秒网盘
