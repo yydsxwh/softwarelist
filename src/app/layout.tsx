@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { LocaleProvider } from "@/components/i18n/locale-provider";
@@ -21,10 +22,13 @@ export const metadata: Metadata = {
   description: "颗秒会议、颗秒网盘、网页文档、MathCode 等自研软件产品",
 };
 
+export const dynamic = "force-dynamic";
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="zh-CN" className="h-full">
       <body className="min-h-full flex flex-col antialiased">
+        <Script src="/api/tab-bootstrap" strategy="beforeInteractive" />
         <LocaleProvider locale="zh-Hans" bilingual={false}>
           <SiteHeader />
           <main className="flex-1">{children}</main>
